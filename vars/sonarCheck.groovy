@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 def call(String mvnHome, String sonarQubeEnv){
    withEnv(["MVN_HOME=${mvnHome}"]){
-           withSonarQubeEnv(${sonarQubeEnv}) {
+           withSonarQubeEnv("${sonarQubeEnv}") {
                sh '${MVN_HOME}/bin/mvn sonar:sonar'
              }
         }
