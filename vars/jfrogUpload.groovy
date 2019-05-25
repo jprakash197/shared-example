@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 def call(String artifatoryEnv, String pattern, String target){
         echo "Hello Artifact 1 ${artifatoryEnv}, ${pattern}, ${target}"
-        var server =Artifactory.server "${artifatoryEnv}" 
-        var uploadSpec="""{
+         def server =Artifactory.server "${artifatoryEnv}" 
+         def uploadSpec="""{
             "files":[
                         {
                             "pattern":"target/${pattern}",
